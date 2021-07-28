@@ -54,3 +54,9 @@ h1 {
 img {
   width: 250px;
 }
+nav {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
