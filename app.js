@@ -301,3 +301,72 @@ for (let i = 0; i < storeLocations.length; i++) {
 for (let i = 0; i < storeLocations.length; i++) {
   storeLocations[i].render();
 }
+
+
+
+// trying to use constructor to build store locations
+
+// function Location(storeLocation, minValue, maxValue, avgCookiesPerSaleValue){
+//   let storeLocation = this.name;
+//   let minValue = this.minAvgCust;
+//   let maxValue = this.maxAvgCust;
+//   let avgCookiesPerSaleValue = this.avgCookiesPerSale;
+//   let randHourlyCustomers = [];
+//   let cookiesSoldPerHour = [];
+//   let totalCookiesPerDay = 0;
+//   // returns a random number of customers between the max and min
+//   this.randCustPerHour() = function (){
+//     for (let i = 0; i < this.hoursOpen.length; i++) {
+//       this.randHourlyCustomers.push(
+//         Math.floor(
+//           Math.random() * (this.maxAvgCust - this.minAvgCust) + this.minAvgCust
+//         )
+//       );
+//     }
+//   };
+//   // pushes the random number of customers times average cookies sold per customer to new array and adds
+//   this.randCookieSoldPerHr = function () {
+//     for (let i = 0; i < this.hoursOpen.length; i++) {
+//       this.cookiesSoldPerHour.push(
+//         Math.floor(this.randHourlyCustomers[i] * this.avgCookiesPerSale)
+//       );
+//       this.totalCookiesPerDay += this.cookiesSoldPerHour[i];
+//     }
+//   };
+//   // method for each location to render data to webpage
+//   this.render() = function() {
+//     this.randCookieSoldPerHr();
+//     const unorderedList = document.getElementById("location-5-list");
+//     for (let i = 0; i < this.hoursOpen.length; i++) {
+//       const listItem = document.createElement("li");
+//       // 6am: 16 cookies
+//       listItem.textContent =
+//         this.hoursOpen[i] + ": " + this.cookiesSoldPerHour[i] + " cookies";
+//       unorderedList.appendChild(listItem);
+//     }
+//     const listItem = document.createElement("li");
+//     listItem.textContent = "Total: " + this.totalCookiesPerDay + " cookies";
+//     unorderedList.appendChild(listItem);
+//   };
+//   // array of hours open
+//   this.hoursOpen = [
+//     "6am",
+//     "7am",
+//     "8am",
+//     "9am",
+//     "10am",
+//     "11am",
+//     "12pm",
+//     "1pm",
+//     "2pm",
+//     "3pm",
+//     "4pm",
+//     "5pm",
+//     "6pm",
+//     "7pm",
+//   ];
+
+// };
+
+// const location1 = new Location("Seattle",23,65,6.3);
+// console.log(location1.name);
