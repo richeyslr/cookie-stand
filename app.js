@@ -25,7 +25,7 @@ const location1 = {
       );
       this.totalCookiesPerDay += this.cookiesSoldPerHour[i];
     }
-  },
+  }, 
   render() {
     this.randCookieSoldPerHr();
     const unorderedList = document.getElementById("location-1-list");

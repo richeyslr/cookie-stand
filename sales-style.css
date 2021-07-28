@@ -1,12 +1,7 @@
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(to right bottom, rgb(109, 224, 196), chocolate);
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 nav ul {
   list-style-type: none;
   padding: 0;
