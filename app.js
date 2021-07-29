@@ -27,17 +27,22 @@ const location1 = {
     }
   }, 
   render() {
+    // run the function to populate random cookies sold array
     this.randCookieSoldPerHr();
-    const unorderedList = document.getElementById("location-1-list");
-    for (let i = 0; i < this.hoursOpen.length; i++) {
-      const listItem = document.createElement("li");
-      listItem.textContent =
-        this.hoursOpen[i] + ": " + this.cookiesSoldPerHour[i] + " cookies";
-      unorderedList.appendChild(listItem);
-    }
-    const listItem = document.createElement("li");
-    listItem.textContent = "Total: " + (this.totalCookiesPerDay) + " cookies";
-    unorderedList.appendChild(listItem);
+    // get table from DOM
+    const table = document.getElementById("table");
+    // insert a new row in the table for the hours open for each store
+    // let times = table.insertRow();
+    // // loop through each hour open in hours open array to create a cell and print the value in each new cell
+    // for (let i = 0; i < this.hoursOpen.length; i++) {
+    //   let timeCells = times.insertCell();
+    //   timeCells.textContent = this.hoursOpen[i];
+    // }
+      const locationData = table.insertRow();
+      for (let i = 0; i < this.cookiesSoldPerHour.length; i++) {
+        let dataCells = locationData.insertCell();
+        dataCells.textContent = `${this.cookiesSoldPerHour[i]} cookies`;
+      }
   },
   hoursOpen: [
     "6am",
@@ -84,18 +89,22 @@ const location2 = {
     }
   },
   render() {
+    // run the function to populate random cookies sold array
     this.randCookieSoldPerHr();
-    const unorderedList = document.getElementById("location-2-list");
-    for (let i = 0; i < this.hoursOpen.length; i++) {
-      const listItem = document.createElement("li");
-      // 6am: 16 cookies
-      listItem.textContent =
-        this.hoursOpen[i] + ": " + this.cookiesSoldPerHour[i] + " cookies";
-      unorderedList.appendChild(listItem);
-    }
-    const listItem = document.createElement("li");
-    listItem.textContent = "Total: " + this.totalCookiesPerDay + " cookies";
-    unorderedList.appendChild(listItem);
+    // get table from DOM
+    const table = document.getElementById("table");
+    // insert a new row in the table for the hours open for each store
+    // let times = table.insertRow();
+    // // loop through each hour open in hours open array to create a cell and print the value in each new cell
+    // for (let i = 0; i < this.hoursOpen.length; i++) {
+    //   let timeCells = times.insertCell();
+    //   timeCells.textContent = this.hoursOpen[i];
+    // }
+      const locationData = table.insertRow();
+      for (let i = 0; i < this.cookiesSoldPerHour.length; i++) {
+        let dataCells = locationData.insertCell();
+        dataCells.textContent = `${this.cookiesSoldPerHour[i]} cookies`;
+      }
   },
   hoursOpen: [
     "6am",
@@ -142,18 +151,22 @@ const location3 = {
     }
   },
   render() {
+    // run the function to populate random cookies sold array
     this.randCookieSoldPerHr();
-    const unorderedList = document.getElementById("location-3-list");
-    for (let i = 0; i < this.hoursOpen.length; i++) {
-      const listItem = document.createElement("li");
-      // 6am: 16 cookies
-      listItem.textContent =
-        this.hoursOpen[i] + ": " + this.cookiesSoldPerHour[i] + " cookies";
-      unorderedList.appendChild(listItem);
-    }
-    const listItem = document.createElement("li");
-    listItem.textContent = "Total: " + this.totalCookiesPerDay + " cookies";
-    unorderedList.appendChild(listItem);
+    // get table from DOM
+    const table = document.getElementById("table");
+    // insert a new row in the table for the hours open for each store
+    // let times = table.insertRow();
+    // // loop through each hour open in hours open array to create a cell and print the value in each new cell
+    // for (let i = 0; i < this.hoursOpen.length; i++) {
+    //   let timeCells = times.insertCell();
+    //   timeCells.textContent = this.hoursOpen[i];
+    // }
+      const locationData = table.insertRow();
+      for (let i = 0; i < this.cookiesSoldPerHour.length; i++) {
+        let dataCells = locationData.insertCell();
+        dataCells.textContent = `${this.cookiesSoldPerHour[i]} cookies`;
+      }
   },
   hoursOpen: [
     "6am",
@@ -200,18 +213,22 @@ const location4 = {
     }
   },
   render() {
+    // run the function to populate random cookies sold array
     this.randCookieSoldPerHr();
-    const unorderedList = document.getElementById("location-4-list");
-    for (let i = 0; i < this.hoursOpen.length; i++) {
-      const listItem = document.createElement("li");
-      // 6am: 16 cookies
-      listItem.textContent =
-        this.hoursOpen[i] + ": " + this.cookiesSoldPerHour[i] + " cookies";
-      unorderedList.appendChild(listItem);
-    }
-    const listItem = document.createElement("li");
-    listItem.textContent = "Total: " + this.totalCookiesPerDay + " cookies";
-    unorderedList.appendChild(listItem);
+    // get table from DOM
+    const table = document.getElementById("table");
+    // insert a new row in the table for the hours open for each store
+    // let times = table.insertRow();
+    // // loop through each hour open in hours open array to create a cell and print the value in each new cell
+    // for (let i = 0; i < this.hoursOpen.length; i++) {
+    //   let timeCells = times.insertCell();
+    //   timeCells.textContent = this.hoursOpen[i];
+    // }
+      const locationData = table.insertRow();
+      for (let i = 0; i < this.cookiesSoldPerHour.length; i++) {
+        let dataCells = locationData.insertCell();
+        dataCells.textContent = `${this.cookiesSoldPerHour[i]} cookies`;
+      }
   },
   hoursOpen: [
     "6am",
@@ -259,18 +276,22 @@ const location5 = {
   },
   // method for each location to render data to webpage
   render() {
+    // run the function to populate random cookies sold array
     this.randCookieSoldPerHr();
-    const unorderedList = document.getElementById("location-5-list");
-    for (let i = 0; i < this.hoursOpen.length; i++) {
-      const listItem = document.createElement("li");
-      // 6am: 16 cookies
-      listItem.textContent =
-        this.hoursOpen[i] + ": " + this.cookiesSoldPerHour[i] + " cookies";
-      unorderedList.appendChild(listItem);
-    }
-    const listItem = document.createElement("li");
-    listItem.textContent = "Total: " + this.totalCookiesPerDay + " cookies";
-    unorderedList.appendChild(listItem);
+    // get table from DOM
+    const table = document.getElementById("table");
+    // insert a new row in the table for the hours open for each store
+    // let times = table.insertRow();
+    // // loop through each hour open in hours open array to create a cell and print the value in each new cell
+    // for (let i = 0; i < this.hoursOpen.length; i++) {
+    //   let timeCells = times.insertTH();
+    //   timeCells.textContent = this.hoursOpen[i];
+    // }
+      const locationData = table.insertRow();
+      for (let i = 0; i < this.cookiesSoldPerHour.length; i++) {
+        let dataCells = locationData.insertCell();
+        dataCells.textContent = `${this.cookiesSoldPerHour[i]} cookies`;
+      }
   },
   // array of hours open
   hoursOpen: [
@@ -298,9 +319,13 @@ for (let i = 0; i < storeLocations.length; i++) {
   storeLocations[i].randCustPerHour();
 }
 // loop through each store location and render new lists
+
+
 for (let i = 0; i < storeLocations.length; i++) {
   storeLocations[i].render();
 }
+
+// create a function to render the table's headings
 
 
 

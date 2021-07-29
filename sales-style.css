@@ -60,3 +60,6 @@ img {
 header {
   text-align: center;
 }
+td {
+  border: solid 2px black; 
+}
