@@ -103,43 +103,47 @@ for (let i = 0; i < storeLocations.length; i++) {
   storeLocations[i].render();
 }
 
-// defining new array for totals row in table. totals will be far left header as first value.
-const totalsRow = ["Totals"];
-// do calculations for totals row
-function calcTotalsRow()
-{
-    // loop through length of cookies sold per hour arrays
-    for (let i = 0; i < location1.cookiesSoldPerHour.length; i++)
-    {
-      let hourlyTotals = 0;
-      // add each value for every location at each hour and push into totals array
-      hourlyTotals += location1.cookiesSoldPerHour[i] += location2.cookiesSoldPerHour[i] += location3.cookiesSoldPerHour[i] += location4.cookiesSoldPerHour[i] += location5.cookiesSoldPerHour[i];
-      totalsRow.push(`${hourlyTotals} cookies`);
-    }
-    // calculating last cell, the grand total
-    let grandTotal = 0;
-    // same method to keep running total as before. add each location's totals for grand total
-    for (let i = 0; i < storeLocations.length; i++)
-    {
-      grandTotal += storeLocations[i].totalCookiesPerDay;
-    }
-    // push grand total into last spot of totals row array
-    totalsRow.push(`${grandTotal} cookies`);
-}
 
 // totals row renders same way as other render methods. inserts new row, then inserts new cells and changes text for value in totals row array
 function renderTotalsRow()
 {
+  let grandTotal = 0;
   const grabTable = document.getElementById("table");
   const locationTotals = grabTable.insertRow();
-  for (let i = 0; i < totalsRow.length; i++) 
+  let columnTotals = locationTotals.insertCell();
+    columnTotals.textContent = "Totals";
+  for (let i = 0; i < hoursOpen.length; i++) 
   {
-    let totalsData = locationTotals.insertCell();
-    totalsData.textContent = totalsRow[i];
+    let hourlyTotals = 0;
+    for (let j = 0; j < storeLocations.length; j++) {
+      hourlyTotals += storeLocations[j].cookiesSoldPerHour[i];
+      grandTotal += storeLocations[j].cookiesSoldPerHour[i];
+    }
+    columnTotals = locationTotals.insertCell();
+    columnTotals.textContent = hourlyTotals;
   }
+  columnTotals = locationTotals.insertCell();
+    columnTotals.textContent = grandTotal;
 }
 
+function renderHeaderRow()
+{
+  const grabTable = document.getElementById("table");
+  let header = grabTable.createTHead();
+  const headerDataRow = header.insertRow();
+  let headerData = headerDataRow.insertCell();
+  headerData.textContent = "Locations/Hours";
+  console.log(headerData);
+  for (let i = 0; i < hoursOpen.length; i++) 
+  {
+    headerData = headerDataRow.insertCell();
+    headerData.textContent = hoursOpen[i];
+    console.log(headerData);
+  }
+  headerData = headerDataRow.insertCell();
+  headerData.textContent = "Totals";
+}
+renderHeaderRow();
 // calling totals row functions to calculate and render totals row
-calcTotalsRow();
 renderTotalsRow();
 

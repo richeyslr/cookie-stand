@@ -61,5 +61,8 @@ header {
   text-align: center;
 }
 td {
-  border: solid 2px black; 
+  border: solid 2px black;
+  padding: 0px; 
+  text-align: center;
+  font-family: Arial, Helvetica,  sans-serif;
 }
