@@ -61,9 +61,9 @@ Location.prototype.randCustPerHour = function () {
 Location.prototype.getLocationTableData = function () {
   this.locationTableData.push(this.cityName);
   for (let i = 0; i < this.cookiesSoldPerHour.length; i++) {
-    this.locationTableData.push(`${this.cookiesSoldPerHour[i]} cookies`);
+    this.locationTableData.push(`${this.cookiesSoldPerHour[i]}`);
   }
-  this.locationTableData.push(`${this.totalCookiesPerDay} cookies`);
+  this.locationTableData.push(`${this.totalCookiesPerDay}`);
 };
 
 // renders all location specific data into table
