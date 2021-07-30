@@ -94,14 +94,14 @@ let location5 = new Location("Lima", 2, 16, 4.6);
 const storeLocations = [location1, location2, location3, location4, location5];
 
 // generate random customers per hour for each location
-for (let i = 0; i < storeLocations.length; i++) {
-  storeLocations[i].randCustPerHour();
-}
+// for (let i = 0; i < storeLocations.length; i++) {
+//   storeLocations[i].randCustPerHour();
+// }
 
-// render table data for each new location
-for (let i = 0; i < storeLocations.length; i++) {
-  storeLocations[i].render();
-}
+// // render table data for each new location
+// for (let i = 0; i < storeLocations.length; i++) {
+//   storeLocations[i].render();
+// }
 
 
 // totals row renders same way as other render methods. inserts new row, then inserts new cells and changes text for value in totals row array
@@ -109,7 +109,7 @@ function renderTotalsRow()
 {
   let grandTotal = 0;
   const grabTable = document.getElementById("table");
-  const locationTotals = grabTable.insertRow();
+  const locationTotals = grabTable.insertRow(storeLocations.length + 1);
   let columnTotals = locationTotals.insertCell();
     columnTotals.textContent = "Totals";
   for (let i = 0; i < hoursOpen.length; i++) 
@@ -133,17 +133,72 @@ function renderHeaderRow()
   const headerDataRow = header.insertRow();
   let headerData = headerDataRow.insertCell();
   headerData.textContent = "Locations/Hours";
-  console.log(headerData);
   for (let i = 0; i < hoursOpen.length; i++) 
   {
     headerData = headerDataRow.insertCell();
     headerData.textContent = hoursOpen[i];
-    console.log(headerData);
   }
   headerData = headerDataRow.insertCell();
   headerData.textContent = "Totals";
 }
+function createLocation(evt)
+{
+  evt.preventDefault();
+  let table = document.getElementById("table");
+  let rowCount = storeLocations.length;
+  table.deleteRow(rowCount + 1);
+  let shopCity = evt.target.city.value;
+  let maxValue = evt.target.maxperhour.value;
+  let minValue = evt.target.minperhour.value;
+  let avgCookiesPerSaleValue = evt.target.cookiespersale.value;
+  let newLocation = new Location(shopCity, minValue, maxValue, avgCookiesPerSaleValue);
+  storeLocations.push(newLocation);
+  newLocation.randCustPerHour();
+  newLocation.render();
+  renderTotalsRow();
+}
+let formEl = document.getElementById("sales-data-form");
+formEl.addEventListener('submit', createLocation);
+
+// function createLocation(evt)
+// {
+//   console.log(evt.target.city.value);
+//   evt.preventDefault();
+//   let shopCity = evt.target.city.value;
+//   let maxValue = evt.target.maxperhour.value;
+//   let minValue = evt.target.minperhour.value;
+//   let avgCookiesPerSaleValue = evt.cookiespersale.value;
+//   let newLocation = new Location(shopCity, maxValue, minValue, avgCookiesPerSaleValue);
+//   storeLocations.push(newLocation);
+//   console.log(newLocation);
+//   newLocation.render();
+// }
+for (let i = 0; i < storeLocations.length; i++) {
+  storeLocations[i].randCustPerHour();
+}
+
+// render table data for each new location
+for (let i = 0; i < storeLocations.length; i++) {
+  storeLocations[i].render();
+}
 renderHeaderRow();
 // calling totals row functions to calculate and render totals row
 renderTotalsRow();
+
+
+
+
+// let formEl = document.getElementById("sales-data-form");
+// formEl.addEventListener('submit', createLocation);
+
+// function createLocation(evt)
+// {
+//   evt.preventDefault();
+//   let shopCity = evt.target.city.value;
+//   let maxValue = evt.target.maxperhour.value;
+//   let minValue = evt.target.minperhour.value;
+//   let avgCookiesPerSaleValue = evt.cookiespersale.value;
+//   let newLocation = new Location(shopCity, maxValue, minValue, avgCookiesPerSaleValue);
+//   storeLocations.push(newLocation);
+// }
 

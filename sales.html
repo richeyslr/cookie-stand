@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./sales-style.css">
+    <link rel="stylesheet" href="./sales-style.css" />
     <title>Salmon Cookies Sales</title>
   </head>
   <body>
@@ -14,52 +14,34 @@
     </header>
     <nav>
       <ul id="nav-list">
-        <li><span><a href="index.html">Home</a></span></li>
-        <li><span><a href="./sales.html">Sales Page</a></span></li>
+        <li>
+          <span><a href="index.html">Home</a></span>
+        </li>
+        <li>
+          <span><a href="./sales.html">Sales Page</a></span>
+        </li>
       </ul>
     </nav>
+    <form id="sales-data-form">
+      <fieldset>
+        <legend>Location Sales Data</legend>
+        <label>City Name</label>
+        <input name="city" type="text" />
+        <label>Maximun Customers Per Hour</label>
+        <input name="maxperhour" type="number" />
+        <label>Minimum Customers Per Hour</label>
+        <input name="minperhour" type="number" />
+        <label>Average Cookies Per Sale</label>
+        <input name="cookiespersale" type="number" />
+      </fieldset>
+      <button type="submit" id="store-data">Save Location</button>
+    </form>
     <div id="data-tables-content">
       <table id="table">
-        <tr id="headers-row">
-          <!-- <th>Locations</th>
-          <th>6am</th>
-          <th>7am</th>
-          <th>8am</th>
-          <th>9am</th>
-          <th>10am</th>
-          <th>11am</th>
-          <th>12pm</th>
-          <th>1pm</th>
-          <th>2pm</th>
-          <th>3pm</th>
-          <th>4pm</th>
-          <th>5pm</th>
-          <th>6pm</th>
-          <th>7pm</th>
-          <th>Total</th> -->
-        </tr>
-        <caption><h2>Daily Sales Estimates</h2></caption>
+        <caption>
+          <h2>Daily Sales Estimates</h2>
+        </caption>
       </table>
-    <!-- <div id="location-1">
-      <h1>Seattle</h1>
-      <ul class ="data-table" id="location-1-list"></ul>
-    </div>
-    <div id="location-2">
-      <h1>Tokyo</h1>
-      <ul class="data-table" id="location-2-list"></ul>
-    </div>
-    <div id="location-3">
-      <h1>Dubai</h1>
-      <ul class="data-table" id="location-3-list"></ul>
-    </div>
-    <div id="location-4">
-      <h1>Paris</h1>
-      <ul class="data-table" id="location-4-list"></ul>
-    </div>
-    <div id="location-5">
-      <h1>Lima</h1>
-      <ul class="data-table" id="location-5-list"></ul>
-    </div> -->
     </div>
     <script src="app.js"></script>
   </body>
