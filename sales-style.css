@@ -1,61 +1,68 @@
 body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
   background: linear-gradient(to right bottom, rgb(109, 224, 196), chocolate);
   font-family: Arial, Helvetica, sans-serif;
 }
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  font-size: 40px;
-  font-family: sans-serif;
-  background-color: white;
-  border: 2px solid black;
-  letter-spacing: 0.1em;
-  width: 5em;
-  height: 1.5em;
-  line-height: 1.5em;
-  position: relative;
-  overflow: hidden;
-  margin: 0.5em;
-  cursor: pointer;
-}
-
-nav ul li span {
-  color: white;
-  mix-blend-mode: difference;
-}
-
-nav ul li::before {
-  content: "";
-  position: absolute;
-  width: 1.5em;
-  height: inherit;
-  background-color: black;
-  border-radius: 50%;
-  top: 0;
-  left: -0.75em;
-  transition: 0.5s ease-out;
-}
-
-nav ul li:hover::before {
-  transform: scale(7);
-}
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(58, 20, 3);
+nav li {
+  display: inline-block;
+  text-align: center;
+  }
+  nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+    background-color: blanchedalmond;
+  }
+  ul {
+  padding: 0px;
+  display: block;
+  border-radius: 10px;
+  }
+  a.nav{
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    background: whitesmoke;
+    color: rgb(63, 2, 2);
+  }
+  h1{
+    text-align: center;
+    font-size: 90px;
+    color: chocolate;
+    font-family: 'Palette Mosaic', cursive;
+  }
+  h1 img{
+    width: 400px;
 }
 img {
   width: 250px;
+}
+form{
+  margin-top: 60px;
+  padding: 15px;
+  background-color: darkcyan;
+  border-radius: 20px;
+  margin-left: 400px;
+  margin-right: 400px;
+  font-size: 20px;
+  display: flex;
+  color: rgb(63, 2, 2);
 }
 #data-tables-content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: darkcyan;
+  border-radius: 20px;
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 .data-table{
-  width: 200px;
+  width: 400px;
 }
 header {
   text-align: center;
@@ -65,4 +72,31 @@ td {
   padding: 0px; 
   text-align: center;
   font-family: Arial, Helvetica,  sans-serif;
+}
+table{
+  margin-bottom: 70px;
+  font-size: 25px;
+  color: rgb(63, 2, 2);
+}
+button{
+  border-radius: 20px;
+  color: rgb(63, 2, 2);
+  background-color: chocolate;
+  margin-left: 20px;
+  margin-top: 120px;
+  height: 100px;
+  width: 180px;
+}
+legend{
+  font-size: 40px;
+}
+fieldset{
+  border: none;
+}
+#formbox input {
+  width: 100%;
+  clear: both;
+}
+ul{
+  list-style: none;
 }

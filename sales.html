@@ -5,37 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sales-style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
     <title>Salmon Cookies Sales</title>
   </head>
   <body>
     <header>
-      <h1>Sales Sheet</h1>
-      <img src="./images/salmon.png" />
-    </header>
-    <nav>
-      <ul id="nav-list">
+      <h1>Sales Sheet <a href="index.html"><img src="./images/salmon.png" /></a></h1>
+     </header>
+     <nav>
+      <center>
+      <ul>
         <li>
-          <span><a href="index.html">Home</a></span>
+          <a href="index.html" class="nav">Home</a>
         </li>
         <li>
-          <span><a href="./sales.html">Sales Page</a></span>
+          <a href="./sales.html" class="nav">Sales Page</a>
+        </li>
+        <li>
+          <a href="#aboutusbox" class="nav">Our Story</a>
+        </li>
+        <li>
+          <a href="#hoursbox" class="nav">Locations and Hours</a>
+        </li>
+        <li>
+          <a href="#contactbox" class="nav">Contact Us</a>
+        </li>
+        <li>
+          <a href="#gallery" class="nav">Products and Merch</a>
         </li>
       </ul>
+      </center>
     </nav>
+    <div id="formbox">
     <form id="sales-data-form">
       <fieldset>
         <legend>Location Sales Data</legend>
-        <label>City Name</label>
-        <input name="city" type="text" />
-        <label>Maximun Customers Per Hour</label>
-        <input name="maxperhour" type="number" />
-        <label>Minimum Customers Per Hour</label>
-        <input name="minperhour" type="number" />
-        <label>Average Cookies Per Sale</label>
-        <input name="cookiespersale" type="number" />
+        <ul>
+        <li><label>City Name</label>
+          <input name="city" type="text" /></li>
+          <li><label>Maximun Customers Per Hour</label>
+            <input name="maxperhour" type="number" /></li>
+        <li><label>Minimum Customers Per Hour</label>
+          <input name="minperhour" type="number" /></li>
+        <li><label>Average Cookies Per Sale</label>
+          <input name="cookiespersale" type="number" /></li>
+        
       </fieldset>
+  
       <button type="submit" id="store-data">Save Location</button>
     </form>
+    </div>
     <div id="data-tables-content">
       <table id="table">
         <caption>
