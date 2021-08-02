@@ -122,8 +122,9 @@ color: rgb(63, 2, 2);
 }
 h1{
   text-align: center;
-  font-size: 60px;
+  font-size: 90px;
   color: chocolate;
+  font-family: 'Palette Mosaic', cursive;
 }
 h1 img{
   width: 400px;
