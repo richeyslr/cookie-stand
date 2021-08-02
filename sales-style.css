@@ -50,6 +50,9 @@ form{
   display: flex;
   color: rgb(63, 2, 2);
 }
+form h2{
+  font-size: 40px;
+}
 #data-tables-content {
   display: flex;
   justify-content: center;
@@ -75,7 +78,7 @@ td {
 }
 table{
   margin-bottom: 70px;
-  font-size: 25px;
+  font-size: 30px;
   color: rgb(63, 2, 2);
 }
 button{
@@ -83,9 +86,11 @@ button{
   color: rgb(63, 2, 2);
   background-color: chocolate;
   margin-left: 20px;
-  margin-top: 120px;
+  margin-top: 200px;
   height: 100px;
   width: 180px;
+  font-size: 30px;
+  font-family: 'Palette Mosaic', cursive;
 }
 legend{
   font-size: 40px;
