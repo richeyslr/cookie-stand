@@ -83,6 +83,7 @@ a.nav{
 #aboutustext{
   padding-right: 20px;
   color: rgb(63, 2, 2);
+  line-height: 30px;
 }
 #aboutustext h2{
   font-size: 30px;
@@ -90,9 +91,10 @@ a.nav{
 #aboutusimg img{
   height: 400px;
   border-radius: 20px;
-
+  margin-top: 150px;
 }
 #hourstext ul{
+text-align: center;
 list-style: none;
 color: rgb(63, 2, 2);
 }
@@ -101,10 +103,12 @@ color: rgb(63, 2, 2);
   color: rgb(63, 2, 2);
   padding-right: 30px;
   font-size: 30px;
+  text-align: center;
 }
 #hoursimg img{
   height: 300px;
   border-radius: 20px;
+  margin-top: 50px;
 }
 #contacttext{
   padding-right: 100px;
@@ -114,6 +118,7 @@ color: rgb(63, 2, 2);
 #contactimg img{
   width: 600px;
   border-radius: 20px;
+  margin-top: 50px;
 }
 h1{
   text-align: center;
